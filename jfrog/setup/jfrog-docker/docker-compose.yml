@@ -1,0 +1,31 @@
+version: "3.1"
+services:
+  jfrog:
+    image: docker.bintray.io/jfrog/artifactory-cpp-ce
+    container_name: artifactory
+    ports:
+      - "8081:8081"
+      - "8082:8082"
+    environment:
+      JF_SHARED_NODE_IP: "127.0.0.1"
+      JF_SHARED_NODE_ID: "artifactory"
+      JF_SHARED_NODE_NAME: "artifactory"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "10"
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 32000
+        hard: 40000
+    volumes:
+      - /c/Users/Mohammed_Alam/learning/data/jfrog/artifactory/:/var/opt/jfrog/artifactory/
+    networks:
+      - jfrog_network
+
+networks:
+  jfrog_network:
+    external: false
+    name: jfrog_network

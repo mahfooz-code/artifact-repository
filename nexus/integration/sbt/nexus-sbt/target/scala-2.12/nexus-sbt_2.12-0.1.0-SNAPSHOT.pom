@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mahfooz.nexus</groupId>
+    <artifactId>nexus-sbt_2.12</artifactId>
+    <packaging>jar</packaging>
+    <description>Some description about your project.</description>
+    <url>https://github.com/example/project</url>
+    <version>0.1.0-SNAPSHOT</version>
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <name>nexus-sbt</name>
+    <organization>
+        <name>mahfooz-code</name>
+        <url>http://example.com/</url>
+    </organization>
+    <scm>
+        <url>https://github.com/your-account/your-project</url>
+        <connection>scm:git@github.com:your-account/your-project.git</connection>
+    </scm>
+    <developers>
+        <developer>
+            <id>mahfooz.iiitian</id>
+            <name>Mohammad Mahfooz Alam</name>
+            <url>http://your.url</url>
+            <email>mahfooz.iiitian@gmail.com</email>
+        </developer>
+    </developers>
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.12.15</version>
+        </dependency>
+    </dependencies>
+</project>

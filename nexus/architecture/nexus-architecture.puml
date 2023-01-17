@@ -1,0 +1,34 @@
+@startuml "nexus-architectue"
+
+[Source Control] as sourceControl
+
+[Build] as build
+
+[Developers] as developer
+
+[Repository] as repository
+
+[Release] as release 
+
+rectangle "Env" as env {
+    [DEV]
+    [QA]
+    [UAT]
+    [PROD]
+}
+
+sourceControl -r-> build
+build -r-> repository
+
+sourceControl <-u-> developer
+
+developer <-r- repository
+
+repository -r-> release
+
+release -r-> DEV
+release -d-> QA
+release -r-> UAT
+release -r-> PROD
+
+@enduml
